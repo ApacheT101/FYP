@@ -1,0 +1,19 @@
+{% from 'field-macro.html' import displayField %}
+{% extends "prelogin-layout.html" %}
+
+{% block title %}Complaint {% endblock title%}
+
+{% block content %}
+        <h2>Submit Complaint</h2>
+        <p>First time here? Register to start using Rchat</p>
+
+        <form action="{{ url_for('submit_complaint') }}", method="POST">
+            {{ displayField(form.complaint, 'Complaint') }}
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-warning">
+            </div>
+            {{ form.csrf_token }}
+        </form>
+
+
+{% endblock %}

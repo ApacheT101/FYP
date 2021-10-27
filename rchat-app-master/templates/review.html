@@ -1,0 +1,20 @@
+{% from 'field-macro.html' import displayField %}
+{% extends "prelogin-layout.html" %}
+
+{% block title %}Review {% endblock title%}
+
+{% block content %}
+        <h2>Submit Review</h2>
+        <p>First time here? Register to start using Rchat</p>
+
+        <form action="{{ url_for('review') }}", method="POST">
+            {{ displayField(form.rating, 'Rating') }}
+            {{ displayField(form.comment, 'Comment') }}
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-warning">
+            </div>
+            {{ form.csrf_token }}
+        </form>
+
+
+{% endblock %}
