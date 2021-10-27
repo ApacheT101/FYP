@@ -20,7 +20,7 @@ app.secret_key= b'\xdej\xde\x84_a\xceE\x81\xf1\x88\x04\xafG\xb7\xb1'
 app.config['WTF_CSRF_SECRET_KEY'] = "b'f\xfa\x8b{X\x8b\x9eM\x83l\x19\xad\x84\x08\xaa"
 
 # Configure database
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://wbivieecjakbls:c3e882d97b5855edb49c20d12a3b5823c418900683413cbbce0360fbbf736208@ec2-23-23-128-222.compute-1.amazonaws.com:5432/dd160l10m5lq4c"
+app.config['SQLALCHEMY_DATABASE_URI'] = "your_heroku_key"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
